@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <style type="text/css">
+            .layout:after{
+                clear:both;
+                content:" ";
+                display: table;
+            }
+            .layout_aside,.layout_main{
+                float:left;
+            }
+            .layout{
+                padding-left: 210px;
+            }
+            .layout_main{
+                width:100%;
+            }
+            .layout_aside{
+                width:200px;
+                margin-left: -210px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="layout_aside">侧边栏宽度固定</aside>
+            <div class="layout_main">主内容栏宽度自适应</div>
+        </div>
+    </body>
+</html>
