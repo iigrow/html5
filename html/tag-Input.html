@@ -1,10 +1,22 @@
 <!DOCTYPE HTML>
-<html>
-<head></head>
+<!--指定缓存文件-->
+<html manifest="file path">
+
+<head>
+    <!--表名被引用图标的大小-->
+    <link sizes="" />
+</head>
+
 <body>
+    <div>
+        <!--scoped="scoped" 限定样式表只能在这个div中使用-->
+        <style type="text/css" scoped="scoped">
+
+        </style>
+    </div>
     <input type="tel" autocomplete="" />
     <input type="search" />
-	<input type="url" />
+    <input type="url" />
     <input type="email" />
     <input type="datetime" />
     <input type="date" />
@@ -19,5 +31,23 @@
     <!--nput, output, select, textarea, button, label, object , fieldset 元素有了新的 form 属性，允许控件关联一个表单。现在这些元素可以放置在页面的任何地方，它们仍和表单关联，而不是只能作为 form 元素的子元素-->
     <!--input , select , textarea 有了新的 required 属性，对于 select 来说，第一个 option 元素必须以一个空值占位。-->
     <!--fieldset 元素现在允许用 disabled 属性来禁用所有子元素的控制，并允许用 name 属性作脚本访问。-->
+    <!--draggable , dropzone 属性可以与新的拖放API一起使用-->
+    <!--spellcheck 属性允许暗示是否内容可以被拼写检查-->
+    <input type="text" min="" max="" multiple="multiple" pattern="" step="" autocomplete="on" formaction="" formenctype="" formmethod=""
+    formtarget="" formnovalidate="" />
+    <textarea maxlength="" wrap=""></textarea>
+    <!--novalidate禁用表单的验证提交，即表单总是可以被提交-->
+    <form novalidate="novalidate">
+    </form>
+    <!--reversed="reversed" 逆序-->
+    <ol reversed="reversed">
+        <li></li>
+    </ol>
+    <!-- async="async"脚本异步执行-->
+    <script async="async" src="">
+        document.querySelector(""); //返回结果集中的第一个元素
+        document.querySelectorAll(""); //返回结果集
+    </script>
 </body>
+
 </html>
