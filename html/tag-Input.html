@@ -47,6 +47,42 @@
     <script async="async" src="">
         document.querySelector(""); //返回结果集中的第一个元素
         document.querySelectorAll(""); //返回结果集
+        
+        var a=JSON.parse('{"a":1}');
+        JSON.stringify(a); //将JSON对象转为字符串
+        
+        window.onhashchange=function(){
+            //当location的hash改变时触发该事件
+        }
+        //location.hash 是当前URL的锚部分（＃后面的部分）
+        //deviceorientation
+        //orientationchange
+        //ontouchstart
+        //ontouchend
+        //ontouchmove
+        //ontouchcancel 当一些更高级别的事件发生的时候（例如电话接入或者弹窗）会触发该事件
+        
+        //触摸事件执行顺序
+        //ontouchstart
+        //ontouchmove //Zero or more touchmove events, depending on movement of the finger(s)
+        //ontouchend
+        //onmousemove
+        //onmousedown
+        //onmouseup
+        //onclick
+        //如果ontouchend及其以上事件在交互的时候被取消，则mouse和click事件不会被触发
+    </script>
+    <!--defer="defer"文档加载完后执行-->
+    <script defer="defer">
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET','....');
+        xhr.onprogress=function(e){
+            if(e.lengthComputable)
+            {
+                //e.total
+                //e.loaded
+            }
+        }
     </script>
 </body>
 
