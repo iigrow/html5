@@ -43,7 +43,7 @@
     <ol reversed="reversed">
         <li></li>
     </ol>
-    <!-- async="async"脚本异步执行-->
+    <!-- async="async"脚本下载完后异步执行-->
     <script async="async" src="">
         document.querySelector(""); //返回结果集中的第一个元素
         document.querySelectorAll(""); //返回结果集
@@ -71,6 +71,14 @@
         //onmouseup
         //onclick
         //如果ontouchend及其以上事件在交互的时候被取消，则mouse和click事件不会被触发
+        
+        // window.history.pushState(data,title,[,url])
+        // window.history.replaceState(data,title,[url])
+        // window.history.state//可以查看history的data数据
+        //通过history回退\前进后触发onpopstate
+        // window.onpopstate=function(event){
+            //
+        // }
     </script>
     <!--defer="defer"文档加载完后执行-->
     <script defer="defer">
