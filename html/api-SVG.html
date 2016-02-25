@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+    <!--SVG(Scalable Vector Graphics)可伸缩性矢量图形
+        基于XML编码的开放式图形\图像标准
+    -->
+    <svg width="500px" height="500px">
+        <rect width="30" height="20" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+        <circle cx="50" cy="10" r="10" />
+        <ellipse cx="20" cy="30" rx="10" ry="15" r="10" />
+        <line x1="20" y1="20" x2="60" y2="60" style="stroke:rgb(99,99,99);stroke-width:2" />
+        <polyline points="0,0 20,20 30,30 30,40" />
+        <polygon points="0,0 20,20 60,30 30,40" />
+        <!--M = moveto
+L = lineto
+H = horizontal lineto
+V = vertical lineto
+C = curveto
+S = smooth curveto
+Q = quadratic Belzier curve
+T = smooth quadratic Belzier curveto
+A = elliptical Arc
+Z = closepath
+以上字符小写时表示相对定位，大写时表示绝对定位
+-->
+        <path d="M153 334
+C153 334 151 334 151 334
+C151 339 153 344 156 344
+C164 344 171 339 171 334
+C171 322 164 314 156 314
+C142 314 131 322 131 334
+C131 350 142 364 156 364
+C175 364 191 350 191 334
+C191 311 175 294 156 294
+C131 294 111 311 111 334
+C111 361 131 384 156 384
+C186 384 211 361 211 334
+C211 300 186 274 156 274" style="fill:white;stroke:red;stroke-width:2" />
+        <!-- <defs> 元素用于预定义一个元素使其能够在SVG图像中重复使用-->
+        <defs>
+            <linearGradient id="orange_red" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="190" rx="85" ry="55" style="fill:url(#orange_red)"/>
+        <!--如果要显示<defs>需要使用<use>元素来引入-->
+        <use xlink:href="#orange_red" x="50" y="50" />
+        
+        <!--<symbol>元素用于定义可重复使用的符号-->
+        <symbol id="shape2">
+            <circle cx="25" cy="25" r="25" style="fill:#bf55ec;"/>
+        </symbol>
+        <use xlink:href="#shape2" x="50" y="25" />
+        <text x="0,0 20,20 60,30 30,40" y="0,0 20,20 60,30 30,40" dx="" dy="" rotate="0.1">你猜现在几点了<text/>
+    </svg>
+    <script>
+
+    </script>
+</body>
