@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+    <script>
+        
+        // javascript单线程的原因:客户端的javascript函数不能运行太长时间，否则会导致循环事件，Web浏览器无法对用户输入作出响应
+        // WebWorker处在一个自包含的执行环境中，无法访问Window对象和Document对象，和主线程之间的通信也只能通过异步消息传递机制来实现
+        
+        var demoWorker=new Worker("../javascript/worker.js");// 参数为js的URL  url必须与当前文档同源
+        // 接受到来自WebWorker的消息（返回结果）
+        demo_worker.onmessage=function(e){
+            console.log(e.data);
+        }
+        demo_worker.onerror=function(e){
+            console.log("filename:"+e.filename+" lineno:"+e.lineno+" message:"+e.message);
+        }
+        demo_worker.postMessage(JSON.stringify({command:"postMessage"}));
+        demo_worker.postMessage(JSON.stringify({command:"close"}));
+        // 强制webworker线程结束
+        //demo_worker.terminate();
+    </script>
+</body>
+
+</html>

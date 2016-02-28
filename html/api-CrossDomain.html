@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        
+        // 多用于嵌入不同源iframe
+        
+        // window.postMessage()方法，该方法允许有限的通信－通过异步消息的方式－在来自不同源的脚本之间。
+        // 该方法第一个参数是字符串 第二个参数指定目标窗口的源（协议\主机名\端口号）
+        // 可以传递一个完整的URL，但是除了协议\主机名\端口号之外的信息都会被忽略
+        // 设置为＊号时，消息可以传递给任何窗口
+        // 设置为／时，指定与当前窗口同源
+        // 调用postMesage后，在目标窗口的Window对象上就会触发一个message事件
+        window.postMessage()
+        if(window.addEventListener){
+            window.addEventListener("message",handleMessage,false);
+        }
+        else {
+            window.attachEvent("onmessage",handleMessage);
+        }
+        function handleMessage(evt){
+        //    evt.data;
+        //    evt.source;
+        //    evt.origin; 
+        // 通常事件处理程序应该首先检测其中的origin属性，忽略来自未知源的消息
+        }
+    </script>
+</body>

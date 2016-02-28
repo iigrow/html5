@@ -5,6 +5,29 @@
 
 <body>
     <script>
-
+        navigator.geolocation.getCurrentPosition(
+            function(position){
+                console.log("经度:"+position.coords.latitude+"纬度:"+position.coords.longitude+"精度:"+position.coords.accuracy)
+                // 海拔信息
+                if(position.coords.altitude){
+                    console.log("海拔:"+position.coords.altitudeAccuracy);
+                }
+                // 速度和航向
+                if(position.coords.speed){
+                   console.log("速度:"+position.coords.speed+"m/s"+"航向:"+position.coords.heading); 
+                }
+            },function(error){
+                console.log("code:"+error.code+"message:"+error.message);
+            },{
+                enableHighAccuracy:false,//获取高精度的位置信息
+                maximumAge:10000,//位置数据缓存时间 默认值为0 表示强制检查新的位置信息  
+                timeout:3000 //默认无限大，获取位置超时时间
+            });
+        // watchPosition()函数会返回一个ID，唯一的标记该位置监视器
+        // 一旦位置发生更改，就会调用指定的回调函数
+        var watchID= navigator.geolocation.watchPosition(function(position){
+            
+        })
+        navigator.geolocation.clearWatch(watchID);
     </script>
 </body>
