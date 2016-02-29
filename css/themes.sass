@@ -1,0 +1,19 @@
+$<name>定义变量 
+$<name>:value; 赋值操作
+#{$<name>} 变量名替换
+$<othername>:$<name>;变量替换
+支持带单位的四则运算:10px/2 ---> 5px
+支持class嵌套
+支持属性嵌套
+&符号可以引用当前class
+@extend可继承class，即将当前class组合到继承class中
+@mixin类似C语言的宏
+@for $i from 1 to 10{}
+@while <condition>{}
+@each $item in a,b,c,d{}
+自定义函数
+@function <functionName>($p1,$p2)
+{
+	@return $p1+$p2;
+}
+支持文件导入：@import "foo.css";
