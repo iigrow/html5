@@ -4,7 +4,45 @@
 <head></head>
 
 <body>
+    <div>
+    <div id="black" style="background-color:black;color:white;height:100px;width:200px;" draggable="true">
+        10
+    </div>
+    <div>
+    <div style="height:100px;" >
+    </div>
+    <div id="red" style="background-color:red;height:100px;width:200px;" draggable="true">
+        10
+    </div>
     <script>
-
+        var blackdiv = document.getElementById("black");
+        var reddiv = document.querySelector("#red");
+        blackdiv.addEventListener("drag",function(event){
+            // 拖动模式下 该事件不断被触发
+           console.log("drag"); 
+        });
+        blackdiv.addEventListener("dragstart",function(event){
+            // 开启拖动模式时触发
+           console.log("dragstart"); 
+        });
+        blackdiv.addEventListener("dragleave",function(event){
+            // 拖动模式下 鼠标离开该元素时触发
+           console.log("dragleave"); 
+        });
+        blackdiv.addEventListener("dragenter",function(event){
+           // 拖动模式下 鼠标进入该元素时触发
+           console.log("dragenter"); 
+        });
+        blackdiv.addEventListener("dragover",function(event){
+           //  拖动模式下 有元素进入该元素范围（包括自身）时不断被触发
+           console.log("dragover"); 
+        });
+        blackdiv.addEventListener("dragend",function(event){
+            // 结束拖动模式时触发
+           console.log("dragend"); 
+        });
+        blackdiv.addEventListener("drop",function(event){
+           console.log("drop"); 
+        });
     </script>
 </body>
