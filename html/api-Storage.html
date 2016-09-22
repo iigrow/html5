@@ -5,10 +5,10 @@
 
 <body>
     <script>
-        //cookie 大小限制4KB 附加在同域的每次请求中，明文传输
+        // cookie 大小限制4KB 附加在同域的每次请求中，明文传输
         // localStorage 是一个持久化的关联数组 数据访问限定同源策略
-        window.localStorage.propertyName=value;
-        window.localStorage['propertyName']=value;
+        window.localStorage.propertyName = value;
+        window.localStorage['propertyName'] = value;
         window.localStorage.clear();
         window.localStorage.setItem();
         window.localStorage.getItem();
@@ -17,5 +17,9 @@
         window.localStorage.key();
         // sessionStorage存储的数据会随着窗口或者标签页关闭而自动删除 
         // 相同标签页的不同sessionStorage是不共享的，不能互相访问
+        // 可以对storage添加事件监听
+        window.addEventListener('storage', function(e) {
+
+        });
     </script>
 </body>

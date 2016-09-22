@@ -1,0 +1,5 @@
+.start{
+  font-size: 125%;
+  line-height: 1.5; /* line-height非绝对值时表示为font-size的倍数 */
+}
+
