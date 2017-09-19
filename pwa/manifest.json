@@ -1,0 +1,29 @@
+{
+  "name": "Name",
+  "short_name": "ShortName",
+  "icons": [
+    {
+      "src": "xxx.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "xxx.png",
+      "sizes": "155x155",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3e4eb8",
+  "theme_color": "#2f3ba2"
+}
+
+// <link ref="manifest" href="/manifest.json">
+
+// ios
+
+// <meta name="apple-mobile-web-app-capable" content="yes">
+// <meta name="apple-mobile-web-app-status-bar-style" content="black">
+// <meta name="apple-mobile-web-app-title" content="XXXX">
+// <link rel="apple-touch-icon" href="xxx.png">

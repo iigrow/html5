@@ -25,11 +25,15 @@
         .box-item{
             /*定义项目的排列顺序 数值越小 越靠前*/
             order:1;
-            /*定义项目的放大比例 默认为0*/
+            /*定义项目的放大比例 默认为0 决定了如何分配父元素的剩余空间，其值为权重*/
+            /*三个元素的 flex-grow 分别为 a，b，c。设 sum 为 a + b + c。那么三个元素将得到剩余空间分别是 x * a / sum, x * b / sum, x * c / sum*/
+            /*当所有元素的 flex-grow 之和小于 1 的时候,用来分配的空间是 sum(flex-grow) / 1 * 剩余空间,按照 x * flex-grow来分配 */
             flex-grow:1;
             /*定义了项目的缩小比例，默认为1,如果空间不足，项目缩小*/
+            /*每个元素收缩的权重为其 flex-shrink 乘以其宽度,子元素溢出宽度为x，x*flex-shrink*width/sum(flex-shrink*width) */
+            /*当所有元素的 flex-shrink 之和小于 1 时，并不会收缩所有的空间，而只会收缩 flex-shrink 之和相对于 1 的比例的空间*/
             flex-shrink: 1; 
-            /*定义了在分配多余空间前，主轴size，浏览器根据这个属性计算主轴是否you多余空间*/
+            /*定义了在分配多余空间前，主轴size，浏览器根据这个属性计算主轴是否有多余空间*/
             flex-basis:300px;
             /*flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto*/
             flex:none;
