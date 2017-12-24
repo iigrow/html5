@@ -1,0 +1,8 @@
+/* 在属性值变化过程中触发过渡变化 */
+.demo{
+  transition: all 2s ; /* 简写 */
+  transition-property: all; /* 过渡的CSS属性名称 none/all/property(width height ..) */
+  transition-duration: 100ms; /* 过渡效果花费时间  s/ms */
+  transition-timing-function: linear; /* 过渡效果的时间曲线 linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n); */
+  transition-delay: 10ms ; /* 过渡效果何时开始 s/ms */
+}

@@ -1,0 +1,9 @@
+/* CSS transforms 可以在不影响正常文档流的情况下改变作用内容的位置 */
+
+/* transform-origin: 指定原点的位置。默认值为元素的中心，可以被移动。很多变形需要用到这个属性，比如旋转，缩放和倾斜，他们都需要一个指定的点作为参数。 */
+
+/* transform: 指定作用在元素上的变形。取值为空格分隔的一系列变形的列表，他们会像被组合操作请求一样被分别执行。 */
+
+.demo{
+  transform-origin: x-axis y-axis z-axis; /* x-axis: left center right length 20%; y-axis: top center bottom length 20%; z-axis: length */
+}
